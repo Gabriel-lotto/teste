@@ -77,13 +77,12 @@ abstract class LoginStoreBase with Store {
   //******************************** Functions ********************************//
 
   String? validateString(String? value) {
-    var textoTrim = value!.trim();
-    var textoLength = textoTrim.length;
-
-    if (textoTrim.isEmpty) {
+    if (value != null && value.isEmpty) {
       buttonState = false;
-    } else if (textoLength == 20) {
-      return 'Máximo de caracteres excedido';
+    } else if (value!.contains('  ')) {
+      return 'Campo não pode conter espaços seguidos';
+    } else if (value.endsWith(' ')) {
+      return 'Campo não pode terminar com espaço';
     } else {
       value = null;
     }
