@@ -7,9 +7,6 @@ import 'package:dio/dio.dart';
 
 import 'debug_log_improvement.dart';
 
-// TODO: Melhorar para a nova versão do pacote.
-// TODO: Adicionar quebra de linha no json formatado
-
 class DioLogger extends Interceptor {
   /// Print request [Options]
   final bool request;

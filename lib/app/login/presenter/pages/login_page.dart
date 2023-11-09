@@ -9,8 +9,6 @@ import 'package:prova/app/shared/widgets/text_field_widget.dart';
 
 import '../stores/login_store.dart';
 
-/// flutter packages pub run build_runner build
-
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
